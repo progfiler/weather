@@ -15,6 +15,7 @@ jobs:
         uses: actions/setup-node@v2
         with: 
           node-version: 12.x
+      - run: docker-compose up 
       - name: J'install les dépendances 
         run: npm i 
       - name: J'effectue les tests unitaire
