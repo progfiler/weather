@@ -1,7 +1,7 @@
 name: "Execution de l'application en manuel"
 
 on: 
-  push:
+  workflow_dispatch:
   
 jobs: 
   start-container: 
