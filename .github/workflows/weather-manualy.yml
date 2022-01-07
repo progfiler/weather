@@ -1,0 +1,13 @@
+name: "Execution de l'application en manuel"
+
+on: 
+  workflow_dispatch:
+  
+jobs: 
+  start-container: 
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: Récupération du repo 
+        uses: actions/checkout@v2
+      - run: docker compose up 
+  
