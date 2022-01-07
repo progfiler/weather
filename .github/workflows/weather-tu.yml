@@ -1,0 +1,23 @@
+name: "Réalisation des tests unitaires"
+
+on: 
+  push:
+    branches:
+      - develop
+  
+jobs: 
+  test-unitaire: 
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: Récupération du repo 
+        uses: actions/checkout@v2
+      - name: Récupération de node JS 
+        uses: actions/setup-node@v2
+        with: 
+          node-version: 12.x
+      - name: J'install les dépendances 
+        run: npm i 
+      - name: J'effectue les tests unitaire
+        run: npm test
+      - name: J'effectue les tests de coverage
+        run: npm run cover
