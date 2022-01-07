@@ -1,7 +1,7 @@
 name: "Execution de l'application en manuel"
 
 on: 
-  repository_dispatch:
+  push:
   
 jobs: 
   start-container: 
